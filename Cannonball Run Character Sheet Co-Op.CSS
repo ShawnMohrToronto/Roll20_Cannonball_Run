@@ -1,0 +1,439 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* Aggressive reset to strip Roll20-injected icons from buttons */\
+.sheet-coop-container button[type="roll"],\
+.sheet-coop-container button[type="roll"]::before,\
+.sheet-coop-container button[type="roll"] span \{\
+    list-style: none !important;\
+    list-style-type: none !important;\
+    background-image: none !important;\
+    background: transparent !important;\
+    content: "" !important;\
+    display: inline-block !important;\
+\}\
+\
+/* Ensure the button text itself remains visible */\
+.sheet-coop-container button[type="roll"] span \{\
+    display: inline !important;\
+\}\
+\
+/* Container Frame Setup - Unclipped solid rectangle with strictly balanced interior padding */\
+.sheet-coop-container \{\
+    position: relative;\
+    z-index: 1;\
+    background-color: #FDFBF4 !important; /* Premium retro off-white/cream canvas */\
+    color: #000000 !important;\
+    padding: 28px !important; /* Forces uniform spacing on all four inner edges */\
+    font-family: Arial, Helvetica, sans-serif;\
+    font-size: 13px;\
+    max-width: 1000px;\
+    box-sizing: border-box;\
+    overflow: hidden; /* Keeps the giant skewed watermark cleanly clipped inside the sheet margins */\
+\}\
+\
+/* SOLID BURGUNDY OUTER PRINT FRAME - Perfectly balanced on all sides */\
+.sheet-coop-container::before \{\
+    content: "";\
+    position: absolute;\
+    /* Strict, mirrored 10px outer cushion completely around the perimeter */\
+    top: 10px !important;\
+    left: 10px !important;\
+    right: 10px !important;\
+    bottom: 10px !important;\
+    \
+    border: 2px solid #A32626 !important;\
+    border-radius: 16px !important; /* Clean convex corners matching your typography */\
+    pointer-events: none; /* Allows clicks to cleanly pass straight through to inputs underneath */\
+    z-index: 2; \
+    box-sizing: border-box;\
+\}\
+\
+/* THE HAVOCBALL RUN BACKGROUND WATERMARK */\
+.sheet-coop-container::after \{\
+    content: "THE HAVOCBALL RUN";\
+    position: absolute;\
+    top: 30%;\
+    left: 5%;\
+    width: 90%;\
+    z-index: -1; /* Sends it directly behind all form fields and labels */\
+    \
+    /* Typography style syncing with the Cannonball poster */\
+    font-family: 'Racing Sans One', sans-serif !important;\
+    font-size: 80px; /* Massive display footprint */\
+    font-weight: bold;\
+    color: rgba(163, 38, 38, 0.04) !important; /* Extremely faint burgundy so it doesn't hurt readability */\
+    text-align: center;\
+    letter-spacing: -2px;\
+    line-height: 1;\
+    text-transform: uppercase;\
+    pointer-events: none; /* Allows clicks to pass right through to inputs underneath */\
+    \
+    /* Dynamic aerodynamic slant matching your section headers */\
+    transform: rotate(-5deg) skewX(-12deg) scale(1.1);\
+    -webkit-transform: rotate(-5deg) skewX(-12deg) scale(1.1);\
+\}\
+\
+/* Base Inputs - Standard Text fields */\
+.sheet-coop-container input[type="text"] \{\
+    background: transparent !important;\
+    color: #000000 !important;\
+    border: none !important;\
+    border-bottom: 1px solid #000000 !important;\
+    border-radius: 0px !important;\
+    padding: 2px 4px !important;\
+    margin: 0px !important;\
+    font-family: inherit;\
+    font-size: 13px !important;\
+    box-sizing: border-box;\
+    display: inline-block;\
+\}\
+\
+/* Custom Checkboxes */\
+.sheet-coop-container input[type="checkbox"] \{\
+    appearance: none;\
+    -webkit-appearance: none;\
+    width: 13px;\
+    height: 13px;\
+    border: 1px solid #000000 !important;\
+    background: transparent !important;\
+    cursor: pointer;\
+    margin: 0px 2px !important;\
+    display: inline-block !important;\
+    vertical-align: middle;\
+\}\
+.sheet-coop-container input[type="checkbox"]:checked \{\
+    background-color: #000000 !important;\
+\}\
+\
+/* FIXED HEADER ROW */\
+.sheet-header-row \{\
+    width: 100%;\
+    display: flex;\
+    justify-content: space-between;\
+    align-items: flex-end;\
+    margin-bottom: 15px;\
+    clear: both;\
+\}\
+.sheet-header-field \{\
+    display: flex;\
+    align-items: flex-end;\
+    box-sizing: border-box;\
+\}\
+.sheet-w35 \{ width: 35%; \}\
+.sheet-w65 \{ width: 62%; \}\
+\
+/* Dynamic width adjustment so input line fills remaining space perfectly */\
+.sheet-header-field input[type="text"] \{\
+    flex: 1; \
+    width: auto;\
+    font-weight: normal !important;\
+    margin-left: 8px !important;\
+\}\
+\
+/* MAIN LABELS & TITLES */\
+.sheet-bold-label, \
+.sheet-section-title-no-line, \
+.sheet-fp-title-text \{ \
+    font-family: 'Racing Sans One', sans-serif !important;\
+    font-size: 14px !important; \
+    color: #A32626 !important; \
+    text-transform: uppercase; \
+    letter-spacing: 0.5px;\
+    white-space: nowrap;\
+    display: inline-block;\
+    transform: skewX(-12deg); \
+    -webkit-transform: skewX(-12deg);\
+    text-shadow: 0.5px 0.5px 0px rgba(163, 38, 38, 0.2);\
+\}\
+\
+/* Main Split Configuration */\
+.sheet-main-body \{\
+    width: 100%;\
+    display: flex;\
+    justify-content: space-between;\
+\}\
+.sheet-body-column-left \{\
+    width: 52%;\
+    box-sizing: border-box;\
+    padding-right: 30px;\
+\}\
+.sheet-body-column-right \{\
+    width: 47%;\
+    box-sizing: border-box;\
+    display: flex;\
+    flex-direction: column;\
+    justify-content: space-between;\
+\}\
+\
+/* Inline Row Container for Stats & GAS side-by-side */\
+.sheet-stats-gas-row \{\
+    width: 100%;\
+    display: flex;\
+    justify-content: space-between;\
+    align-items: flex-start;\
+    margin-bottom: 20px;\
+    clear: both;\
+\}\
+\
+/* Clean Left-Aligned Stats Stack */\
+.sheet-block-stats \{\
+    width: 55%;\
+    box-sizing: border-box;\
+\}\
+.sheet-stat-left-cell \{\
+    width: 100%;\
+    border-bottom: none !important;\
+    margin-bottom: 6px;\
+    padding-bottom: 2px;\
+    display: flex;\
+    justify-content: flex-start;\
+    align-items: center;\
+    clear: both;\
+\}\
+\
+/* STAT ROLL BUTTONS */\
+.sheet-stat-left-cell button[type="roll"] \{\
+    background: transparent !important;\
+    border: none !important;\
+    padding: 0 !important;\
+    margin: 0 !important;\
+    color: #A32626 !important; \
+    font-family: 'Racing Sans One', sans-serif !important;\
+    font-size: 11px !important;\
+    text-transform: uppercase;\
+    text-align: left;\
+    width: 85px;\
+    display: inline-block;\
+    transform: skewX(-12deg);\
+    -webkit-transform: skewX(-12deg);\
+\}\
+\
+/* Outlined Stat Number Boxes */\
+.sheet-stat-left-cell input[type="number"] \{\
+    background: transparent !important;\
+    color: #000000 !important;\
+    border: 1px solid #000000 !important;\
+    border-radius: 0px !important;\
+    font-family: inherit;\
+    font-size: 13px !important;\
+    font-weight: bold;\
+    width: 22px !important;\
+    height: 22px !important;\
+    padding: 0px !important;\
+    margin: 0px !important;\
+    text-align: center !important;\
+    box-sizing: border-box;\
+    -moz-appearance: textfield;\
+\}\
+.sheet-stat-left-cell input[type="number"]::-webkit-outer-spin-button,\
+.sheet-stat-left-cell input[type="number"]::-webkit-inner-spin-button \{\
+    -webkit-appearance: none;\
+    margin: 0;\
+\}\
+\
+/* GAS Matrix Positioning */\
+.sheet-block-gas \{\
+    width: 40%;\
+    box-sizing: border-box;\
+    display: flex;\
+    flex-direction: column;\
+    align-items: flex-start;\
+\}\
+.sheet-gas-box \{\
+    border: 1px solid #000000;\
+    padding: 5px;\
+    display: inline-block;\
+\}\
+.sheet-gas-row \{\
+    margin-bottom: 5px;\
+    clear: both;\
+\}\
+\
+/* ROLL POOL BUTTON */\
+.sheet-roll-action-block \{\
+    width: 100%;\
+    margin-top: 10px;\
+    margin-bottom: 20px;\
+    display: flex;\
+    justify-content: flex-start;\
+    clear: both;\
+\}\
+.sheet-roll-action-block button[type="roll"] \{\
+    background: transparent !important;\
+    border: 1px solid #A32626 !important;\
+    color: #A32626 !important;\
+    padding: 5px 15px !important;\
+    font-family: 'Racing Sans One', sans-serif !important;\
+    font-size: 14px !important;\
+    text-transform: uppercase;\
+    cursor: pointer;\
+    transform: skewX(-12deg);\
+    -webkit-transform: skewX(-12deg);\
+    transition: all 0.2s ease;\
+\}\
+.sheet-roll-action-block button[type="roll"]:hover \{\
+    background-color: #A32626 !important;\
+    color: #FDFBF4 !important;\
+\}\
+\
+/* Equipment Formats */\
+.sheet-block-equipment \{\
+    width: 100%;\
+    margin-bottom: 20px;\
+    clear: both;\
+\}\
+.sheet-item-row \{\
+    width: 100%;\
+    margin-bottom: 10px;\
+    clear: both;\
+\}\
+.sheet-item-text-wide \{\
+    width: 80% !important;\
+    display: inline-block;\
+\}\
+.sheet-box-wrapper \{\
+    width: 18%;\
+    display: inline-block;\
+    text-align: right;\
+    float: right;\
+\}\
+\
+/* Standalone Loot Block Configuration */\
+.sheet-standalone-loot \{\
+    width: 100%;\
+    clear: both;\
+\}\
+\
+/* Unified Conditions List Stack */\
+.sheet-block-conditions \{\
+    width: 100%;\
+    clear: both;\
+\}\
+.sheet-condition-list-container \{\
+    width: 100%;\
+    display: flex;\
+    flex-direction: column;\
+    gap: 9px;\
+\}\
+.sheet-condition-row \{\
+    width: 100%;\
+    display: flex;\
+    align-items: center;\
+    clear: both;\
+\}\
+\
+/* CONDITION INDEX NUMBERS */\
+.sheet-cond-num \{\
+    font-family: 'Racing Sans One', sans-serif !important;\
+    font-size: 12px !important;\
+    color: #A32626 !important;\
+    width: 15px;\
+    display: inline-block;\
+    transform: skewX(-12deg);\
+\}\
+.sheet-condition-description-input \{\
+    width: 90% !important;\
+    margin-left: 6px !important;\
+    border-bottom: 1px solid #000000 !important;\
+\}\
+\
+/* Final Push Right Panel */\
+.sheet-final-push-right-panel \{\
+    width: 100%;\
+    box-sizing: border-box;\
+    clear: both;\
+    padding-top: 15px;\
+\}\
+.sheet-fp-header-row \{\
+    margin-bottom: 6px;\
+\}\
+.sheet-fp-dice-text \{\
+    font-size: 11px;\
+    margin-left: 5px;\
+    font-family: Arial, Helvetica, sans-serif;\
+\}\
+.sheet-fp-underline-input \{\
+    width: 100% !important;\
+    border-bottom: 1px solid #000000 !important;\
+\}\
+\
+/* STAGGERED BOTTOM RULES SEPARATION BAR */\
+.sheet-bottom-rules-area \{\
+    width: 100%;\
+    margin-top: 30px;\
+    padding-top: 25px;\
+    clear: both;\
+    position: relative;\
+\}\
+.sheet-bottom-rules-area::before \{\
+    content: "";\
+    position: absolute;\
+    top: 0;\
+    left: 2px;\
+    width: 100%;\
+    height: 12px;\
+    background-image: \
+        linear-gradient(to right, rgba(253, 251, 244, 0) 50%, rgba(253, 251, 244, 1) 95%),\
+        linear-gradient(to bottom, \
+            #A32626 0px, #A32626 2px, \
+            transparent 2px, transparent 5px, \
+            #A32626 5px, #A32626 7px, \
+            transparent 7px, transparent 10px, \
+            #A32626 10px, #A32626 12px\
+        );\
+    background-repeat: no-repeat;\
+    background-size: 100% 12px;\
+    background-position: top center;\
+    transform: skewX(-12deg);\
+    -webkit-transform: skewX(-12deg);\
+    transform-origin: left top;\
+    z-index: 1;\
+\}\
+\
+.sheet-full-width-block \{\
+    width: 100%;\
+    margin-bottom: 20px;\
+    clear: both;\
+\}\
+.sheet-wide-rules-list \{\
+    width: 100%;\
+\}\
+\
+/* Dynamic rows built to guarantee perfectly matched right-edge alignments */\
+.sheet-ability-extended-row, \
+.sheet-advance-extended-row \{\
+    width: 100%;\
+    margin-bottom: 8px;\
+    display: flex;\
+    align-items: center;\
+    box-sizing: border-box;\
+    clear: both;\
+\}\
+\
+/* ABILITY & ADVANCE PREFIX LAYOUTS */\
+.sheet-num-prefix \{\
+    font-family: 'Racing Sans One', sans-serif !important;\
+    font-size: 12px !important;\
+    color: #A32626 !important;\
+    width: 20px;\
+    display: inline-block;\
+    transform: skewX(-12deg);\
+    flex-shrink: 0;\
+\}\
+.sheet-adv-box \{\
+    margin-right: 7px !important;\
+    flex-shrink: 0;\
+\}\
+\
+/* Flex-grow forces the inputs to expand and clip exactly on the right border boundary */\
+.sheet-ability-connecting-input,\
+.sheet-advance-connecting-input \{\
+    flex: 1;\
+    width: auto !important;\
+    border-bottom: 1px solid #000000 !important;\
+\}}

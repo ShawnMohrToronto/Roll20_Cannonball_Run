@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;div class="sheet-coop-container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- MASTER HEADER SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sheet-header-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sheet-header-field sheet-w35"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="sheet-bold-label"&gt;Name:&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" name="attr_character_name" placeholder=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sheet-header-field sheet-w65"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="sheet-bold-label"&gt;Description:&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" name="attr_description" placeholder=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sheet-space-divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- MAIN BODY SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sheet-main-body"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- LEFT COLUMN: STATS + GAS, EQUIPMENT, LOOT --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sheet-body-column-left"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- UPPER LEFT: STATS &amp; GAS SIDE-BY-SIDE --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sheet-stats-gas-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- STATS BLOCK --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-block-stats"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-section-title-no-line"&gt;Stats&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-stat-left-cell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button type="roll" name="roll_power" value="!havoc-roll --player @{character_name} --stat Power"&gt;Power&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="number" name="attr_power" value=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-stat-left-cell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button type="roll" name="roll_style" value="!havoc-roll --player @{character_name} --stat Style"&gt;Style&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="number" name="attr_style" value=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-stat-left-cell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button type="roll" name="roll_tech" value="!havoc-roll --player @{character_name} --stat Tech"&gt;Tech&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="number" name="attr_tech" value=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-stat-left-cell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button type="roll" name="roll_clearnace" value="!havoc-roll --player @{character_name} --stat Clearance"&gt;Clearance&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="number" name="attr_clearance" value=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-stat-left-cell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button type="roll" name="roll_handling" value="!havoc-roll --player @{character_name} --stat Handling"&gt;Handling&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="number" name="attr_handling" value=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-stat-left-cell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button type="roll" name="roll_story" value="!havoc-roll --player @{character_name} --stat Story"&gt;Story&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="number" name="attr_story" value=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- GAS MATRIX --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-block-gas"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-section-title-no-line"&gt;GAS&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-gas-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="sheet-gas-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="checkbox" name="attr_gas_1"&gt; &lt;input type="checkbox" name="attr_gas_2"&gt; &lt;input type="checkbox" name="attr_gas_3"&gt; &lt;input type="checkbox" name="attr_gas_4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="sheet-gas-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="checkbox" name="attr_gas_5"&gt; &lt;input type="checkbox" name="attr_gas_6"&gt; &lt;input type="checkbox" name="attr_gas_7"&gt; &lt;input type="checkbox" name="attr_gas_8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="sheet-gas-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="checkbox" name="attr_gas_9"&gt; &lt;input type="checkbox" name="attr_gas_10"&gt; &lt;input type="checkbox" name="attr_gas_11"&gt; &lt;input type="checkbox" name="attr_gas_12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="sheet-gas-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="checkbox" name="attr_gas_13"&gt; &lt;input type="checkbox" name="attr_gas_14"&gt; &lt;input type="checkbox" name="attr_gas_15"&gt; &lt;input type="checkbox" name="attr_gas_16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- ROLL BUTTON BLOCK --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sheet-roll-action-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button type="roll" name="roll_pool" value="/roll ?{Pool Size|1}d6"&gt;ROLL POOL&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- EQUIPMENT SUB-BLOCK --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sheet-block-equipment"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-section-title-no-line"&gt;Equipment&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-item-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" name="attr_eq_item1" placeholder="" class="sheet-item-text-wide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-box-wrapper"&gt;&lt;input type="checkbox" name="attr_eq_box1_1"&gt;&lt;input type="checkbox" name="attr_eq_box1_2"&gt;&lt;input type="checkbox" name="attr_eq_box1_3"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-item-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" name="attr_eq_item2" placeholder="" class="sheet-item-text-wide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-box-wrapper"&gt;&lt;input type="checkbox" name="attr_eq_box2_1"&gt;&lt;input type="checkbox" name="attr_eq_box2_2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-item-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" name="attr_eq_item3" placeholder="" class="sheet-item-text-wide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-box-wrapper"&gt;&lt;input type="checkbox" name="attr_eq_box3_1"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- LOOT BLOCK --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sheet-standalone-loot"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-section-title-no-line"&gt;Loot&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-item-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" name="attr_loot_item1" placeholder="" class="sheet-item-text-wide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-box-wrapper"&gt;&lt;input type="checkbox" name="attr_loot_box1_1"&gt;&lt;input type="checkbox" name="attr_loot_box1_2"&gt;&lt;input type="checkbox" name="attr_loot_box1_3"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- RIGHT COLUMN: CONDITIONS WITH PINNED FINAL PUSH --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sheet-body-column-right"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- CONDITIONS BLOCK --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sheet-block-conditions"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-section-title-no-line"&gt;Condition&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-condition-list-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-condition-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="sheet-cond-num"&gt;1&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="checkbox" name="attr_cond_box1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" name="attr_cond_txt1" class="sheet-condition-description-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-condition-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="sheet-cond-num"&gt;2&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="checkbox" name="attr_cond_box2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" name="attr_cond_txt2" class="sheet-condition-description-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-condition-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="sheet-cond-num"&gt;3&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="checkbox" name="attr_cond_box3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" name="attr_cond_txt3" class="sheet-condition-description-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-condition-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="sheet-cond-num"&gt;4&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="checkbox" name="attr_cond_box4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" name="attr_cond_txt4" class="sheet-condition-description-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-condition-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="sheet-cond-num"&gt;5&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="checkbox" name="attr_cond_box5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" name="attr_cond_txt5" class="sheet-condition-description-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="sheet-condition-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="sheet-cond-num"&gt;6&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="checkbox" name="attr_cond_box6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" name="attr_cond_txt6" class="sheet-condition-description-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- FINAL PUSH --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sheet-final-push-right-panel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-fp-header-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="sheet-fp-title-text"&gt;Final Push&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="sheet-fp-dice-text"&gt;(8d6)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" name="attr_final_push_ability" class="sheet-fp-underline-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- LOWER SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sheet-bottom-rules-area"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sheet-full-width-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sheet-section-title-no-line"&gt;Abilities&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sheet-wide-rules-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-ability-extended-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="sheet-num-prefix"&gt;1&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" name="attr_ab_full_line1" class="sheet-ability-connecting-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-ability-extended-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="sheet-num-prefix"&gt;2&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" name="attr_ab_full_line2" class="sheet-ability-connecting-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-ability-extended-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="sheet-num-prefix"&gt;3&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" name="attr_ab_full_line3" class="sheet-ability-connecting-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sheet-full-width-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sheet-section-title-no-line"&gt;Advances&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sheet-wide-rules-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-advance-extended-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="checkbox" name="attr_adv_check1" class="sheet-adv-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" name="attr_adv_text1" class="sheet-advance-connecting-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-advance-extended-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="checkbox" name="attr_adv_check2" class="sheet-adv-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" name="attr_adv_text2" class="sheet-advance-connecting-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sheet-advance-extended-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="checkbox" name="attr_adv_check3" class="sheet-adv-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" name="attr_adv_text3" class="sheet-advance-connecting-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+</body>
+</html>
